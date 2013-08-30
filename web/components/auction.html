@@ -1,0 +1,55 @@
+<polymer-element name="x-auction" extends="li" attributes="auction">
+  <template>
+    <h2>Auction</h2>
+
+    <div>Item: {{auction.itemDescription}}</div>
+    <div>Starting price: {{auction.startingPrice}}</div>
+    <div>
+      Ending date: {{auction.endingDate}}
+      <template if="{{auction.active}}">(in {{timeLeft}})</template>
+    </div>
+    <template if="{{auction.buyItNowPricePrice}}">
+      <div>Buy it now: {{auction.buyItNowPricePrice}}</div>
+    </template>
+    <template if="{{auction.winner}}">
+      <div>Winner: {{auction.winner.name}}</div>
+    </template>
+
+    <template if="{{auction.active}}">
+      <h3>Actions</h3>
+
+      <template if="{{auction.buyItNowPricePrice}}">
+        <button on-click="buy">Buy</button>
+      </template>
+
+      <x-error error="{{errors['bid']}}">
+        <input type="number" value="{{bid}}">
+      </x-error>
+      <button on-click="makeBid">Bid</button>
+    </template>
+
+    <template if="{{auction.bids.length > 0}}">
+      <h3>Bids</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Bidder</th>
+            <th>Amount</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <template repeat="{{auction.bids}}">
+            <tr>
+              <td>{{bidder.name}}</td>
+              <td>{{amount}}</td>
+              <td>{{createdAt}}</td>
+            </tr>
+          </template>
+        </tbody>
+      </table>
+    </template>
+  </template>
+  <script type="application/dart" src="auction_view.dart"></script>
+</polymer-element>

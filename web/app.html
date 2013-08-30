@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>App</title>
+  <link rel="import" href="components/error.html">
+  <link rel="import" href="components/auctions.html">
+  <link rel="import" href="components/user_info.html">
+  <script src="packages/polymer/boot.js"></script>
+</head>
+
+<body>
+
+<template id="temp" bind>
+  <x-user-info user="{{user}}"></x-user-info>
+  <x-auctions auction-list="{{auctionList}}"></x-auctions>
+</template>
+
+<script type="application/dart" src="app.dart"></script>
+</body>
+</html>

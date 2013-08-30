@@ -1,0 +1,16 @@
+BROKEN:
+
+1. Cannot access the parent context (makes repeaters useless)
+* WHEN FIXED: Remove the global eventBus
+
+2. Cannot pass primitive values when instantiating a component
+* WHEN FIXED: Create the field component
+
+3. Cannot set global helpers
+* WHEN FIXED: Format date times, amounts, intervals
+* WHEN FIXED: Handle malformed numbers
+
+
+TODO:
+
+1. Release Dart.FP

@@ -1,0 +1,6 @@
+name: auctions
+description: >
+  A sample application built using Polymer.Dart
+dependencies:
+  polymer: 0.6.21+3
+  fp: 0.1.0

@@ -1,0 +1,16 @@
+<polymer-element name="x-error" extends="div" attributes="error">
+  <template>
+    <div>
+      <content></content>
+      <span>{{error}}</span>
+    </div>
+  </template>
+
+  <script type="application/dart">
+    import 'package:polymer/polymer.dart';
+    @CustomTag("x-error")
+    class ErrorView extends PolymerElement with ObservableMixin {
+      @observable String error;
+    }
+  </script>
+</polymer-element>
