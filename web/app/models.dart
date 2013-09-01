@@ -16,6 +16,7 @@ class Bid {
 
 class Auction extends Object with ObservableMixin {
   String itemDescription;
+  String image;
   num startingPrice = 0;
   num buyItNowPricePrice;
   DateTime endingDate;
@@ -25,7 +26,7 @@ class Auction extends Object with ObservableMixin {
 
   List<Bid> bids;
 
-  Auction(this.itemDescription, this.bids, this.endingDate, {this.startingPrice, this.buyItNowPricePrice});
+  Auction(this.itemDescription, this.image, this.bids, this.endingDate, {this.startingPrice, this.buyItNowPricePrice});
 
   addBid(Bid bid) => bids.add(bid);
   get lastBid => bids.last;

@@ -17,7 +17,8 @@ createAuctionList(){
     ]);
 
     return new Auction(
-        "MacBook Air",
+        "Old Vase",
+        "http://www.extravaganzi.com/wp-content/uploads/2010/11/Familys-Old-Chinese-Vase-Fetches-83-Million-1.jpg",
         bids,
         secondsFromNow(60),
 
@@ -31,7 +32,8 @@ createAuctionList(){
     ]);
 
     return new Auction(
-        "MacBook Air",
+        "Old Chair",
+        "http://betterdecoratingbible.com/wp-content/uploads/2013/03/Upholstery-Makeover-Chair-Suzy-q-better-decorating-bible-blog-how-to-reupholster-a-chair-Louis-xvi-piping-damask-velvet-fabric-strip-re-do-flea-market-re-make-bring-back-to-life-tufted.jpg",
         bids,
         secondsFromNow(10),
 

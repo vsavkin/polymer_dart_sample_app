@@ -6,15 +6,23 @@
   <link rel="import" href="components/error.html">
   <link rel="import" href="components/auctions.html">
   <link rel="import" href="components/user_info.html">
+  <link rel="stylesheet" href="app.css">
   <script src="packages/polymer/boot.js"></script>
 </head>
 
 <body>
 
-<template id="temp" bind>
-  <x-user-info user="{{user}}"></x-user-info>
-  <x-auctions auction-list="{{auctionList}}"></x-auctions>
-</template>
+<header>
+  <h1>Flea Market</h1>
+  a sample application built using Polymer.Dart
+</header>
+
+<section id="content">
+  <template id="temp" bind>
+    <x-user-info user="{{user}}"></x-user-info>
+    <x-auctions auction-list="{{auctionList}}"></x-auctions>
+  </template>
+</section>
 
 <script type="application/dart" src="app.dart"></script>
 </body>

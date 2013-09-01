@@ -1,6 +1,20 @@
 <polymer-element name="x-user-info" extends="div" attributes="user">
   <template>
-    You are: {{user.name}}
+    <style>
+      @host {
+        * {
+          float: right;
+          display: block;
+          padding: 1em;
+          background-color: aquamarine;
+
+          position: absolute;
+          top: 5px;
+          right: 5px;
+        }
+      }
+    </style>
+    Logged in as {{user.name}}
   </template>
   <script type="application/dart" src="user_info_view.dart"></script>
 </polymer-element>
