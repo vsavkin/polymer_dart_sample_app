@@ -50,8 +50,7 @@
 
       input {
         display: block;
-        height: 24px;
-        padding: 6px 12px;
+        padding: 5px 12px;
         font-size: 14px;
         line-height: 1.428571429;
         color: #555555;
@@ -90,11 +89,14 @@
       <template if="{{auction.active}}">
         <x-error error="{{errors['bid']}}">
           <input type="number" value="{{bid}}">
-          <button on-click="makeBid">Bid</button>
 
-          <template if="{{auction.buyItNowPricePrice}}">
-            or <button on-click="buy">Buy</button>
-          </template>
+          <div class="actions">
+            <button on-click="makeBid">Bid</button>
+
+            <template if="{{auction.buyItNowPricePrice}}">
+              or <button on-click="buy">Buy</button>
+            </template>
+          </div>
         </x-error>
       </template>
 
