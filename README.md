@@ -25,10 +25,12 @@ Such use cases as singing in/singing out, are creating new auctions are not goin
 
 This is a video showing the application in action:
 
-VIDEO
+[http://www.youtube.com/watch?v=iRkf2M5qTBk](http://www.youtube.com/watch?v=iRkf2M5qTBk)
 
 To run the app:
 
+* git clone https://github.com/vsavkin/polymer_dart_sample_app
+* pub install
 * pub serve
 * Go to localhost:8080/app.html
 
@@ -44,7 +46,7 @@ Open issues, send pull requests.
 
 #### Accessing the parent context does not work
 
-* WHEN FIXED: Remove the global eventBus
+* WHEN FIXED: Remove eventBus
 
 #### Passing primitive values when instantiating a component does not work
 
