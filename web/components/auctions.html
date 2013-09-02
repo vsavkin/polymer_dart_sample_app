@@ -2,8 +2,18 @@
 
 <polymer-element name="x-auctions" extends="ul" attributes="auction-list">
   <template>
+    <style>
+      li {
+        width: 1000px;
+        margin: 0 auto;
+        list-style-type: none;
+        border-bottom: 1px solid RGB(212,212,212);
+      }
+    </style>
     <template repeat="{{auctionList.auctions}}">
-      <x-auction auction="{{}}"></x-auction>
+      <li>
+        <x-auction auction="{{}}"></x-auction>
+      </li>
     </template>
   </template>
   <script type="application/dart" src="auctions_view.dart"></script>

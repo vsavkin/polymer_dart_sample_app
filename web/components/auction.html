@@ -34,12 +34,32 @@
       }
 
       button {
-        font-size: 1.2em;
-        padding: 5px 30px;
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.428571429;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        border: 1px solid transparent;
+        border-radius: 4px;
       }
 
       input {
-        font-size: 1.2em;
+        display: block;
+        height: 24px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.428571429;
+        color: #555555;
+        vertical-align: middle;
+        background-color: #ffffff;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
         float: left;
       }
     </style>
@@ -70,13 +90,12 @@
       <template if="{{auction.active}}">
         <x-error error="{{errors['bid']}}">
           <input type="number" value="{{bid}}">
+          <button on-click="makeBid">Bid</button>
+
+          <template if="{{auction.buyItNowPricePrice}}">
+            or <button on-click="buy">Buy</button>
+          </template>
         </x-error>
-        <button on-click="makeBid">Bid</button>
-
-        <template if="{{auction.buyItNowPricePrice}}">
-          or <button on-click="buy">Buy</button>
-        </template>
-
       </template>
 
       <template if="{{auction.bids.length > 0}}">

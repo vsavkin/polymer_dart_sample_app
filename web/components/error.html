@@ -1,8 +1,15 @@
 <polymer-element name="x-error" extends="div" attributes="error">
   <template>
+    <style>
+      span.error {
+        color: red;
+      }
+    </style>
     <div>
-      <content></content>
-      <span>{{error}}</span>
+      <div>
+        <content></content>
+      </div>
+      <span class="error">{{error}}</span>
     </div>
   </template>
 
