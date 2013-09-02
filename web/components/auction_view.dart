@@ -11,7 +11,7 @@ class AuctionView extends PolymerElement with ObservableMixin {
 
   Map errors = toObservable({});
 
-  inserted() => runEvery(_updateTimeLeft, seconds: 5);
+  inserted() => runEvery(_updateTimeLeft, seconds: 1);
 
   makeBid() => eventBus.fire("makeBid", _makeBuildEvent(double.parse(bid)));
   buy()     => eventBus.fire("buy",     _makeBuyEvent());
