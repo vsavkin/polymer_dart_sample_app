@@ -27,21 +27,30 @@ This is a video showing the application in action:
 
 VIDEO
 
+To run the app:
+
+* pub serve
+* Go to localhost:8080/app.html
+
+Make sure you turn on the "Show shadow DOM" option in Chrome.
+
+
+
 ## Feedback is Welcomed
 
 Open issues, send pull requests.
 
 ## Known Issues
 
-1. Accessing the parent context does not work
+#### Accessing the parent context does not work
 
 * WHEN FIXED: Remove the global eventBus
 
-2. Passing primitive values when instantiating a component does not work
+#### Passing primitive values when instantiating a component does not work
 
 * WHEN FIXED: Create the field component
 
-3. Investigate ways to set global helpers
+#### Investigate ways to set global helpers
 
 * WHEN FIXED: Format date times, amounts, intervals
 * WHEN FIXED: Handle malformed numbers
